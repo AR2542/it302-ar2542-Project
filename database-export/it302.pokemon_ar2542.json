@@ -1,1 +1,404 @@
-
+[{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a0"
+  },
+  "name": "bulbasaur",
+  "weight": 69,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png",
+  "order": 1,
+  "types": [
+    {
+      "slot": 1,
+      "name": "grass"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a1"
+  },
+  "name": "ivysaur",
+  "weight": 130,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/2.png",
+  "order": 2,
+  "types": [
+    {
+      "slot": 1,
+      "name": "grass"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a2"
+  },
+  "name": "venusaur",
+  "weight": 1000,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/3.png",
+  "order": 3,
+  "types": [
+    {
+      "slot": 1,
+      "name": "grass"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a3"
+  },
+  "name": "charmander",
+  "weight": 85,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
+  "order": 5,
+  "types": [
+    {
+      "slot": 1,
+      "name": "fire"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a4"
+  },
+  "name": "charmeleon",
+  "weight": 190,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/5.png",
+  "order": 6,
+  "types": [
+    {
+      "slot": 1,
+      "name": "fire"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a5"
+  },
+  "name": "charizard",
+  "weight": 905,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
+  "order": 7,
+  "types": [
+    {
+      "slot": 1,
+      "name": "fire"
+    },
+    {
+      "slot": 2,
+      "name": "flying"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a6"
+  },
+  "name": "squirtle",
+  "weight": 90,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+  "order": 10,
+  "types": [
+    {
+      "slot": 1,
+      "name": "water"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a7"
+  },
+  "name": "wartortle",
+  "weight": 225,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/8.png",
+  "order": 11,
+  "types": [
+    {
+      "slot": 1,
+      "name": "water"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a8"
+  },
+  "name": "blastoise",
+  "weight": 855,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+  "order": 12,
+  "types": [
+    {
+      "slot": 1,
+      "name": "water"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85a9"
+  },
+  "name": "caterpie",
+  "weight": 29,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
+  "order": 14,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85aa"
+  },
+  "name": "metapod",
+  "weight": 99,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
+  "order": 15,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85ab"
+  },
+  "name": "butterfree",
+  "weight": 320,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
+  "order": 16,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    },
+    {
+      "slot": 2,
+      "name": "flying"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85ac"
+  },
+  "name": "weedle",
+  "weight": 32,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
+  "order": 17,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85ad"
+  },
+  "name": "kakuna",
+  "weight": 100,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
+  "order": 18,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85ae"
+  },
+  "name": "beedrill",
+  "weight": 295,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
+  "order": 19,
+  "types": [
+    {
+      "slot": 1,
+      "name": "bug"
+    },
+    {
+      "slot": 2,
+      "name": "poison"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85af"
+  },
+  "name": "pidgey",
+  "weight": 18,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/16.png",
+  "order": 21,
+  "types": [
+    {
+      "slot": 1,
+      "name": "normal"
+    },
+    {
+      "slot": 2,
+      "name": "flying"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85b0"
+  },
+  "name": "pidgeotto",
+  "weight": 300,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/17.png",
+  "order": 22,
+  "types": [
+    {
+      "slot": 1,
+      "name": "normal"
+    },
+    {
+      "slot": 2,
+      "name": "flying"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85b1"
+  },
+  "name": "pidgeot",
+  "weight": 395,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/18.png",
+  "order": 23,
+  "types": [
+    {
+      "slot": 1,
+      "name": "normal"
+    },
+    {
+      "slot": 2,
+      "name": "flying"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85b2"
+  },
+  "name": "rattata",
+  "weight": 35,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/19.png",
+  "order": 25,
+  "types": [
+    {
+      "slot": 1,
+      "name": "normal"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67aa3ca3018202ce68bd85b3"
+  },
+  "name": "raticate",
+  "weight": 185,
+  "default_image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/20.png",
+  "order": 26,
+  "types": [
+    {
+      "slot": 1,
+      "name": "normal"
+    }
+  ],
+  "lastUpdated": {
+    "$date": "2025-02-10T18:49:42.512Z"
+  }
+}]
