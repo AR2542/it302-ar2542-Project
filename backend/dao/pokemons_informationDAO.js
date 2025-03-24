@@ -1,3 +1,10 @@
+//Name: Abhinav Ramesh
+//UCID: ar2542
+//Course Name: Advanced internet Applications
+//Section Number: 452
+//Assignment Name: Phase 3 CUD MongoDB Data using Node.js Assignment
+//Email Address: ar2542@njit.edu
+
 import mongodb from "mongodb"
 const ObjectId = mongodb.ObjectId
 
