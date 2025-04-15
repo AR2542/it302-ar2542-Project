@@ -2,7 +2,7 @@
 //UCID: ar2542
 //Course Name: Advanced internet Applications
 //Section Number: 452
-//Assignment Name: Phase 3 CUD MongoDB Data using Node.js Assignment
+//Assignment Name: Phase 4 Read Node.js Data using React.js Assignment
 //Email Address: ar2542@njit.edu
 
 import express from 'express'
@@ -12,6 +12,7 @@ import pokemonsinformationController from './pokemons_information.controller.js'
 const router = express.Router()
 
 router.route('/').get(pokemonsController.apiGetPokemons)
+router.route('/order/:order').get(pokemonsController.apiGetPokemonsbyOrder)
 
 router.route('/information')
     .post(pokemonsinformationController.addInformation)
@@ -19,3 +20,4 @@ router.route('/information')
     .delete(pokemonsinformationController.removeInformation)
 
 export default router
+

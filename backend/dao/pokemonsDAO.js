@@ -2,10 +2,12 @@
 //UCID: ar2542
 //Course Name: Advanced internet Applications
 //Section Number: 452
-//Assignment Name: Phase 2 Read MongoDB Data using Node.js Assignment
+//Assignment Name: Phase 4 Read Node.js Data using React.js Assignment
 //Email Address: ar2542@njit.edu
 
 let pokemons
+import mongodb from "mongodb"
+const ObjectId = mongodb.ObjectId
 
 export default class pokemonsDAO {
     static async injectDB(conn) {
@@ -40,6 +42,31 @@ export default class pokemonsDAO {
             console.error(`Unable to issue find command, ${e}`)
             console.error(e)
             return { PokemonsList: [], totalNumPokemons: 0 }
+        }
+    }
+
+    static async getPokemonsbyOrder(order) {
+        try {
+            return await pokemons.aggregate([
+                {
+                    $match: {
+                        order: parseInt(order),
+                    }
+                },
+                {
+                    $lookup:
+                    {
+                        from: 'pokemon_ar2542',
+                        localField: '_id',
+                        foreignField: 'order',
+                        as: 'searchedOrder'
+                    }
+                }
+            ]).next()
+        }
+        catch (e) {
+            console.error(`something went wrong in getPokemonsbyOrder: ${e}`)
+            throw e
         }
     }
 }
