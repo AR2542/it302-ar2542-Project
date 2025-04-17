@@ -12,18 +12,18 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
 import PokemonsList from "./components/PokemonsList";
 import Pokemon from "./components/pokemon";
 
-
 function App() {
   const [user, setUser] = useState(null);
   return (
-    <div className="App">
+    <div>
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
-          <Navbar.Brand href="#home">Pokemons List</Navbar.Brand>
+          <Navbar.Brand>Pokemons Information</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
