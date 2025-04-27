@@ -1,8 +1,8 @@
 //Name: Abhinav Ramesh
-//UCID: ar2542
+//UCorder: ar2542
 //Course Name: Advanced internet Applications
 //Section Number: 452
-//Assignment Name: Phase 3 CUD MongoDB Data using Node.js Assignment
+//Assignment Name: Phase 5 CUD Node.js Data using React.js Assignment
 //Email Address: ar2542@njit.edu
 
 import mongodb from "mongodb"
@@ -12,16 +12,14 @@ let pokemoninfos
 export default class pokemonsinformationDAO {
     static async injectDB(conn) {
         if (pokemoninfos)  return
-        try { pokemoninfos = await conn.db(process.env.POKEMONS_AR2542_NS).collection('infomation_ar2542') } 
+        try { pokemoninfos = await conn.db(process.env.POKEMONS_AR2542_NS).collection('information_ar2542') } 
         catch (e) { console.error(`unable to establish connection handle in pokemon_informationDAO: ${e}`) }
     }
-    static async addInfo(pokemon_order, pokemon_name, information, information_id, writer, writer_id, date) {
+    static async addInfo(pokemon_order, information, writer, writer_id, date) {
         try {
             const pokemonInformationDocument = {
                 order: pokemon_order,
-                pokemon_name: pokemon_name,
                 information: information,
-                information_id: information_id,
                 writer: writer,
                 writer_id: writer_id,
                 date: date
@@ -33,10 +31,10 @@ export default class pokemonsinformationDAO {
             return { error: e }
         }
     }
-    static async changeInfo(information_id, information, date) {
+    static async changeInfo(infoID, writerID, information, date) {
         try {
             const changingInformation = await pokemoninfos.updateOne(
-                { information_id: information_id },
+                { writer_id: writerID, _id: ObjectId.createFromHexString(infoID) },
                 { $set: { information: information, date: date } }
             )
             return changingInformation
@@ -46,9 +44,12 @@ export default class pokemonsinformationDAO {
             return { error: e }
         }
     }
-    static async removeInfo(information_id) {
+    static async removeInfo(infoId, writerid) {
         try {
-            const deleteResponse = await pokemoninfos.deleteOne({ information_id: information_id })
+            const deleteResponse = await pokemoninfos.deleteOne({ 
+                _id: ObjectId.createFromHexString(infoId),
+                writer_id: writerid,
+             })
             return deleteResponse
         } catch (e) {
             console.error(`unable to delete information: ${e}`)

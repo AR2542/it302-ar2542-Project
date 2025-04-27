@@ -1,8 +1,8 @@
 //Name: Abhinav Ramesh
-//UCID: ar2542
+//UCorder: ar2542
 //Course Name: Advanced internet Applications
 //Section Number: 452
-//Assignment Name: Phase 4 Read Node.js Data using React.js Assignment
+//Assignment Name: Phase 5 CUD Node.js Data using React.js Assignment
 //Email Address: ar2542@njit.edu
 
 let pokemons
@@ -56,10 +56,10 @@ export default class pokemonsDAO {
                 {
                     $lookup:
                     {
-                        from: 'pokemon_ar2542',
-                        localField: '_id',
+                        from: 'information_ar2542',
+                        localField: 'order',
                         foreignField: 'order',
-                        as: 'searchedOrder'
+                        as: 'details'
                     }
                 }
             ]).next()

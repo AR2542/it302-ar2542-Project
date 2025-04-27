@@ -1,8 +1,8 @@
 //Name: Abhinav Ramesh
-//UCID: ar2542
+//UCorder: ar2542
 //Course Name: Advanced internet Applications
 //Section Number: 452
-//Assignment Name: Phase 4 Read Node.js Data using React.js Assignment
+//Assignment Name: Phase 5 CUD Node.js Data using React.js Assignment
 //Email Address: ar2542@njit.edu
 
 import React, { useState, useEffect } from 'react'
@@ -21,7 +21,8 @@ const Pokemon = (props) => {
     const [pokemon, setPokemon] = useState({
         order: null,
         name: "",
-        weight: ""
+        weight: "",
+        details: []
     })
     let { order } = useParams();
     const getPokemon = order => {
@@ -38,20 +39,60 @@ const Pokemon = (props) => {
         getPokemon(order)
     }, [order])
 
+    const deleteInformation = (infoId, index) => {
+        pokemonsDataService.deleteInformation(infoId, props.user.id)
+            .then(response => {
+                setPokemon((prevState) => {
+                    prevState.details.splice(index, 1)
+                    return ({
+                        ...prevState
+                    })
+                })
+            })
+            .catch(e => {
+                console.log(e)
+            })
+    }
+
     return (
         <div>
             <Container>
                 <Row>
                     <Col>
-                        <Image src={pokemon.default_image} fluorder />
+                        <Image src={pokemon.default_image} />
                     </Col>
                     <Col>
                         <Card>
                             <Card.Header as="h5">{pokemon.name}</Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    <p>Order: {pokemon.order}</p>
+                                    <p>Weight: {pokemon.weight}</p>
+                                </Card.Text>
+                                {props.user && <Link to={"/ar2542/pokemons/" + order + "/information"}>Add Information</Link>}
+                            </Card.Body>
                         </Card>
                         <br></br>
+                        <h2>Information</h2><br></br>
+                        {pokemon.details.map((info, index) => {
+                            return (
+                                <Card key={index}>
+                                    <h5>{info.writer + " wrote this information on " + new Date(Date.parse(info.date)).toDateString()}</h5>
+                                    <p>{info.information}</p>
+                                    {props.user && props.user.id === info.writer_id &&
+                                        <Row>
+                                            <Col><Link
+                                                to={"/ar2542/pokemons/" + order + "/information"}
+                                                state={{ currentInformation: info }}
+                                            >Edit</Link>
+                                            </Col>
+                                            <Col><Button variant="link" onClick={() => deleteInformation(info._id, index)}>
+                                                    Delete</Button></Col>
+                                        </Row>}
+                                </Card>
+                            )
+                        })}
                     </Col>
-                    <p>{pokemon.name}</p>
                 </Row>
             </Container>
         </div>
